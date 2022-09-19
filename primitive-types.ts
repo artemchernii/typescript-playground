@@ -8,9 +8,15 @@
  * symbol
  * bigint
  */
-type Person = 'artem' | 'rustam';
+let num = 10;
+let str = 'str';
+let isFalse = false;
 
-const artem: Person = 'rustam';
-const rustam: Person = 'rustam';
+let myNull: null = null;
+let myUndef: undefined = undefined;
 
-console.log('Artem', artem);
+let mySym = Symbol('123123');
+
+let bigIntx = 123123123n;
+
+console.log(bigIntx);
