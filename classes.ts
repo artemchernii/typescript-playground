@@ -29,3 +29,9 @@ const superArtem = new NewSuperUser({
 });
 
 console.log('super puper: ', superArtem);
+
+const formatter = Intl.NumberFormat('en', { notation: 'compact' });
+
+const number = formatter.format(11123122223);
+
+console.log('Pretty number => ', number);
