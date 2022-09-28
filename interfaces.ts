@@ -43,3 +43,27 @@ const olejka: BigInterface = {
 
 console.log('Artem user: ', artemUser);
 console.log('Olejko', olejka);
+
+interface SalaryByString {
+  [key: string]: number;
+  timeout: number;
+}
+
+type empl = false | true;
+
+const newSalary: SalaryByString = {
+  Olejka: 11111,
+  timeout: 1,
+};
+console.log('New salary: ', newSalary);
+
+type Mapish = { [k: string]: boolean };
+type M = keyof Mapish;
+
+type Point = { artem: number; rustam: number };
+type P = keyof Point;
+
+const artemName = 'artem';
+
+const mTest: M = 2222;
+const pTest: P = artemName;

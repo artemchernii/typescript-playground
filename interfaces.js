@@ -21,3 +21,8 @@ const olejka = {
 };
 console.log('Artem user: ', artemUser);
 console.log('Olejko', olejka);
+const newSalary = {
+    Olejka: 11111,
+    2: 1,
+};
+console.log('New salary: ', newSalary);
