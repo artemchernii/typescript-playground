@@ -10,3 +10,12 @@ const superArt = {
     content: 'Hype',
 };
 const myArticles = makeRequest('/getArticles', superArt);
+function checkTheType(type) {
+    return typeof type;
+}
+const boolCheck = false;
+const nullCheck = null;
+const whatIsBool = checkTheType(boolCheck);
+const whatIsNull = checkTheType(nullCheck);
+console.log('whatIsNull', whatIsNull);
+console.log('whatIsBool', whatIsBool);

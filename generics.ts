@@ -28,3 +28,16 @@ const superArt: Articles = {
     content: 'Hype',
 };
 const myArticles = makeRequest<Articles>('/getArticles', superArt);
+
+function checkTheType<T>(type: T): string {
+    return typeof type;
+}
+
+const boolCheck = false;
+const nullCheck = null;
+
+const whatIsBool = checkTheType<Boolean>(boolCheck);
+const whatIsNull = checkTheType<null>(nullCheck);
+
+console.log('whatIsNull', whatIsNull);
+console.log('whatIsBool', whatIsBool);
