@@ -73,7 +73,7 @@ function workWithPerson<T extends MinPersInfo = DefaultCustomer>(
     args: T
 ): string {
     if (Object.entries(args).length > 1) {
-        console.log('Object has more than one key', this);
+        console.log('Object has more than one key');
         for (const key in args) {
             if (Object.prototype.hasOwnProperty.call(args, key)) {
                 const element = args[key];
