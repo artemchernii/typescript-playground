@@ -12,9 +12,9 @@ interface AnimalX extends UserX {
 
 const serverInfo: UserX = {
     name: 'Artem',
-    speak: () => {
-        console.log('hello');
-    },
+    // speak: () => {
+    //     console.log('hello');
+    // },
 };
 
 function isHuman(serverInfo: UserX): serverInfo is HumanX {
