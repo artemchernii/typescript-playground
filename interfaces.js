@@ -23,6 +23,9 @@ console.log('Artem user: ', artemUser);
 console.log('Olejko', olejka);
 const newSalary = {
     Olejka: 11111,
-    2: 1,
+    timeout: 1,
 };
 console.log('New salary: ', newSalary);
+const artemName = 'artem';
+const mTest = 2222;
+const pTest = artemName;
