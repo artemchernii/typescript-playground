@@ -41,3 +41,49 @@ const whatIsNull = checkTheType<null>(nullCheck);
 
 console.log('whatIsNull', whatIsNull);
 console.log('whatIsBool', whatIsBool);
+
+// Generics in interface
+
+interface User000<T> {
+    type: T;
+    name: string;
+}
+
+const rustamUser: User000<number> = { name: 'Rustam', type: 5 };
+
+type CustomerType = 'new' | 'impulse' | 'angry' | 'happy';
+class WorkWithCustomer<T> {
+    type: T;
+    name: string;
+    constructor(type: T, name: string) {
+        this.type = type;
+        this.name = name;
+    }
+}
+
+const workWithCustomer1 = new WorkWithCustomer<CustomerType>('new', 'Artem');
+interface MinPersInfo {
+    name: string;
+}
+interface DefaultCustomer {
+    type: 'usual';
+    name: 'Unknown';
+}
+function workWithPerson<T extends MinPersInfo = DefaultCustomer>(
+    args: T
+): string {
+    if (Object.entries(args).length > 1) {
+        console.log('Object has more than one key', this);
+        for (const key in args) {
+            if (Object.prototype.hasOwnProperty.call(args, key)) {
+                const element = args[key];
+                console.log(`key:${key} | element: ${element}`);
+            }
+        }
+    }
+    return args.name;
+}
+
+const wwp = workWithPerson({ name: 'Artem' });
+const testDef = workWithPerson({ type: 'a', name: 'Ahtung' });
+console.log(testDef);
